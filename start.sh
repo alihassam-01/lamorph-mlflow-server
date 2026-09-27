@@ -19,6 +19,7 @@ export MLFLOW_AUTH_CONFIG_PATH=/tmp/basic_auth.ini
 exec mlflow server \
   --host 0.0.0.0 \
   --port "${PORT:-5000}" \
+  --workers 1 \
   --backend-store-uri "${DATABASE_URL}" \
   --registry-store-uri "${DATABASE_URL}" \
   --artifacts-destination "${ARTIFACT_URI}" \
