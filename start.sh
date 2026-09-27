@@ -12,5 +12,6 @@ exec mlflow server \
   --host 0.0.0.0 \
   --port "${PORT:-5000}" \
   --backend-store-uri "${DATABASE_URL}" \
+  --registry-store-uri "${DATABASE_URL}" \
   --artifacts-destination "${ARTIFACT_URI}" \
   --app-name basic-auth
